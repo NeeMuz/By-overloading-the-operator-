@@ -119,8 +119,44 @@
       margin-top: 2rem;
     }
     @media print {
-      body { background: white; }
-      section { box-shadow: none; break-inside: avoid; }
+      @page { size: A4; margin: 12mm 12mm; }
+      body {
+        background: white;
+        line-height: 1.3;
+        font-size: 10.5pt;
+      }
+      .wrap { max-width: none; padding: 0; }
+      header { margin-bottom: 0.8rem; padding-bottom: 0.6rem; }
+      header h1 { font-size: 22pt; }
+      header p { font-size: 9.5pt; margin-top: 0.2rem; }
+      .note {
+        margin-bottom: 0.8rem;
+        padding: 0.45rem 0.65rem;
+        font-size: 9pt;
+      }
+      section {
+        box-shadow: none;
+        border-radius: 6px;
+        padding: 0.55rem 0.7rem 0.2rem;
+        margin-bottom: 0.55rem;
+        break-inside: avoid;
+      }
+      h2 {
+        font-size: 11pt;
+        margin-bottom: 0.35rem;
+        padding-bottom: 0.25rem;
+      }
+      .item {
+        padding: 0.35rem 0;
+        gap: 0.15rem 0.7rem;
+      }
+      .name-de { font-size: 10pt; }
+      .name-ru { font-size: 9.2pt; margin-top: 0; }
+      .desc-de, .desc-ru { font-size: 8.8pt; margin-top: 0.05rem; }
+      .price { font-size: 10pt; }
+      .sub { font-size: 8.5pt; }
+      footer { margin-top: 0.8rem; font-size: 8.5pt; }
+      a { color: inherit; text-decoration: none; }
     }
   </style>
 </head>
