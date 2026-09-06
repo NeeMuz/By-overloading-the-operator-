@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alte Liebe — Speisekarte / Меню (DE–RU)</title>
+  <style>
+    :root {
+      --ink: #1a1612;
+      --muted: #5c5348;
+      --line: #d8cfc3;
+      --bg: #f7f2ea;
+      --paper: #fffdf8;
+      --accent: #8b3a2a;
+      --soft: #efe6d8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at top, #fff8ee 0%, var(--bg) 55%),
+        linear-gradient(180deg, #f3ebe0, #efe6d8);
+      line-height: 1.45;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: 0.04em;
+      color: var(--accent);
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .note {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      margin: 0 auto 2rem;
+      max-width: 720px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.25rem 1.25rem 0.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 8px 24px rgba(40, 28, 16, 0.04);
+    }
+    h2 {
+      margin: 0 0 1rem;
+      font-size: 1.15rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 2px solid var(--soft);
+      padding-bottom: 0.55rem;
+    }
+    .item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.35rem 1rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px dashed var(--line);
+    }
+    .item:last-child { border-bottom: 0; }
+    .name-de {
+      font-weight: 700;
+      font-size: 1.02rem;
+    }
+    .name-ru {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 0.15rem;
+    }
+    .desc-de {
+      grid-column: 1 / -1;
+      font-size: 0.9rem;
+      color: #3d362e;
+      margin-top: 0.15rem;
+    }
+    .desc-ru {
+      grid-column: 1 / -1;
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .price {
+      font-weight: 700;
+      white-space: nowrap;
+      align-self: start;
+    }
+    .sub {
+      margin-top: 0.35rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+    @media print {
+      @page { size: A4; margin: 12mm 12mm; }
+      body {
+        background: white;
+        line-height: 1.3;
+        font-size: 10.5pt;
+      }
+      .wrap { max-width: none; padding: 0; }
+      header { margin-bottom: 0.8rem; padding-bottom: 0.6rem; }
+      header h1 { font-size: 22pt; }
+      header p { font-size: 9.5pt; margin-top: 0.2rem; }
+      .note {
+        margin-bottom: 0.8rem;
+        padding: 0.45rem 0.65rem;
+        font-size: 9pt;
+      }
+      section {
+        box-shadow: none;
+        border-radius: 6px;
+        padding: 0.55rem 0.7rem 0.2rem;
+        margin-bottom: 0.55rem;
+        break-inside: avoid;
+      }
+      h2 {
+        font-size: 11pt;
+        margin-bottom: 0.35rem;
+        padding-bottom: 0.25rem;
+      }
+      .item {
+        padding: 0.35rem 0;
+        gap: 0.15rem 0.7rem;
+      }
+      .name-de { font-size: 10pt; }
+      .name-ru { font-size: 9.2pt; margin-top: 0; }
+      .desc-de, .desc-ru { font-size: 8.8pt; margin-top: 0.05rem; }
+      .price { font-size: 10pt; }
+      .sub { font-size: 8.5pt; }
+      footer { margin-top: 0.8rem; font-size: 8.5pt; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>ALTE LIEBE</h1>
+      <p>Armenische und deutsche Küche / Армянская и немецкая кухня</p>
+      <p>Speisekarte · двуязычное меню (DE + RU)</p>
+    </header>
+
+    <p class="note">
+      Формат: <strong>оригинал (DE)</strong> сверху, <strong>перевод (RU)</strong> сразу под ним.
+      Цены — как в PDF-меню ресторана.
+    </p>
+
+    <section>
+      <h2>Vorspeise / Закуски</h2>
+
+      <div class="item">
+        <div>
+          <div class="name-de">1. Wurstbrett Spezial</div>
+          <div class="name-ru">1. Колбасная доска «Специаль»</div>
+          <div class="desc-de">Grillwurst-Variation mit Pommes, Senf und BBQ-Sauce</div>
+          <div class="desc-ru">Ассорти колбас с гриля, картофель фри, горчица и BBQ-соус</div>
+        </div>
+        <div class="price">18,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">2. Käseplatte</div>
+          <div class="name-ru">2. Сырная тарелка</div>
+          <div class="desc-de">Brie, Blauschimmelkäse, Cheddar und Bergkäse mit Honig, Trauben, Nüssen und Brot — ca. 350 g</div>
+          <div class="desc-ru">Бри, голубой сыр, чеддер и горный сыр с мёдом, виноградом, орехами и хлебом — ок. 350 г</div>
+        </div>
+        <div class="price">21,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">3. Eingelegtes Gemüse</div>
+          <div class="name-ru">3. Маринованные овощи</div>
+          <div class="desc-de">mit hausgemachtem Sauerkraut, Gurken, Peperoni, Mais und Oliven</div>
+          <div class="desc-ru">с домашней квашеной капустой, огурцами, перцем пеперони, кукурузой и оливками</div>
+        </div>
+        <div class="price">10,90</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Hauptspeisen / Основные блюда</h2>
+
+      <div class="item">
+        <div>
+          <div class="name-de">1. Armenische Schaschlik</div>
+          <div class="name-ru">1. Армянский шашлык</div>
+          <div class="desc-de">Schweinefleisch, gegrillte Kartoffel, Sauce</div>
+          <div class="desc-ru">Свинина, картофель на гриле, соус</div>
+        </div>
+        <div class="price">16,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">2. Lula Kebab vom Grill</div>
+          <div class="name-ru">2. Люля-кебаб с гриля</div>
+          <div class="desc-de">Hähnchenhackfleisch, gegrillte Kartoffel, Sauce</div>
+          <div class="desc-ru">Фарш из курицы, картофель на гриле, соус</div>
+        </div>
+        <div class="price">15,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">3. Rippchen</div>
+          <div class="name-ru">3. Рёбрышки</div>
+          <div class="desc-de">Schweinerippchen, gegrillte Kartoffel, Sauce</div>
+          <div class="desc-ru">Свиные рёбрышки, картофель на гриле, соус</div>
+        </div>
+        <div class="price">24,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">4. Chicken Wings vom Grill</div>
+          <div class="name-ru">4. Куриные крылышки с гриля</div>
+          <div class="desc-de">mit Pommes und Sauce</div>
+          <div class="desc-ru">с картофелем фри и соусом</div>
+        </div>
+        <div class="price">14,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">5. Lammkarre vom Grill</div>
+          <div class="name-ru">5. Каре ягнёнка с гриля</div>
+          <div class="desc-de">mit kleinem Salat und Sauce</div>
+          <div class="desc-ru">с небольшим салатом и соусом</div>
+        </div>
+        <div class="price">28,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">6. Lachs mit Spinat</div>
+          <div class="name-ru">6. Лосось со шпинатом</div>
+          <div class="desc-de">und Sauce Béarnaise</div>
+          <div class="desc-ru">и соусом беарнез</div>
+        </div>
+        <div class="price">23,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">7. Schnitzel Wiener Art</div>
+          <div class="name-ru">7. Шницель по-венски</div>
+          <div class="desc-de">Putenschnitzel mit Pommes</div>
+          <div class="desc-ru">Шницель из индейки с картофелем фри</div>
+        </div>
+        <div class="price">15,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Bratwurst mit Pommes</div>
+          <div class="name-ru">Братвурст с картофелем фри</div>
+        </div>
+        <div class="price">10,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Currywurst mit Pommes</div>
+          <div class="name-ru">Карривурст с картофелем фри</div>
+        </div>
+        <div class="price">10,50</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Salate / Салаты</h2>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Norwegischer Salat mit Lachs</div>
+          <div class="name-ru">Норвежский салат с лососем</div>
+          <div class="desc-de">Blattsalat, Gurke, Cherrytomaten, Lachs, Frischkäse, Honig-Senf-Dressing, Balsamico-Creme</div>
+          <div class="desc-ru">Листовой салат, огурец, черри, лосось, сливочный сыр, медово-горчичная заправка, бальзамический крем</div>
+        </div>
+        <div class="price">14,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Salat mit Hähnchen</div>
+          <div class="name-ru">Салат с курицей</div>
+          <div class="desc-de">Blattsalat, Gurke, Cherrytomaten, Paprika, gegrilltes Hähnchenfilet, Balsamico-Creme, Parmesan</div>
+          <div class="desc-ru">Листовой салат, огурец, черри, перец, куриное филе с гриля, бальзамический крем, пармезан</div>
+        </div>
+        <div class="price">13,00</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Halloumi vom Grill</div>
+          <div class="name-ru">Халлуми с гриля</div>
+          <div class="desc-de">mit Blattsalat, Rucola und Kirschtomaten</div>
+          <div class="desc-ru">с листовым салатом, рукколой и помидорами черри</div>
+        </div>
+        <div class="price">13,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Mediterranes Grillgemüse</div>
+          <div class="name-ru">Средиземноморские овощи с гриля</div>
+          <div class="desc-de">Auberginen, Paprika, Tomaten mit Knoblauch und Kräutern</div>
+          <div class="desc-ru">Баклажаны, перец, помидоры с чесноком и травами</div>
+        </div>
+        <div class="price">12,00</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Veganer Gartensalat</div>
+          <div class="name-ru">Веганский садовый салат</div>
+          <div class="desc-de">Blattsalat, Gurken, Tomaten, Paprika, Avocado</div>
+          <div class="desc-ru">Листовой салат, огурцы, помидоры, перец, авокадо</div>
+        </div>
+        <div class="price">11,00</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Pommes mit Mayonnaise oder Ketchup</div>
+          <div class="name-ru">Картофель фри с майонезом или кетчупом</div>
+        </div>
+        <div class="price">5,00</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Flammkuchen / Фламмкухен</h2>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Flammkuchen Elsässer Art</div>
+          <div class="name-ru">Фламмкухен по-эльзасски</div>
+          <div class="desc-de">mit Speck und roten Zwiebeln, Frischkäse</div>
+          <div class="desc-ru">с беконом, красным луком и сливочным сыром</div>
+        </div>
+        <div class="price">10,80</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Flammkuchen Birne &amp; Brie</div>
+          <div class="name-ru">Фламмкухен с грушей и бри</div>
+          <div class="desc-de">mit Brie, Birne, Honig und Walnüssen, Frischkäse</div>
+          <div class="desc-ru">с сыром бри, грушей, мёдом, грецкими орехами и сливочным сыром</div>
+        </div>
+        <div class="price">13,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Veganer Flammkuchen</div>
+          <div class="name-ru">Веганский фламмкухен</div>
+          <div class="desc-de">mit gebratenen Auberginen, Champignons, Tomaten und roten Zwiebeln, Frischkäse</div>
+          <div class="desc-ru">с жареными баклажанами, шампиньонами, помидорами, красным луком и сливочным сыром</div>
+        </div>
+        <div class="price">12,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Flammkuchen Apfel</div>
+          <div class="name-ru">Фламмкухен с яблоком</div>
+          <div class="desc-de">mit Apfel, Zimt und Zucker, Frischkäse</div>
+          <div class="desc-ru">с яблоком, корицей, сахаром и сливочным сыром</div>
+        </div>
+        <div class="price">11,00</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Flammkuchen Lachs</div>
+          <div class="name-ru">Фламмкухен с лососем</div>
+          <div class="desc-de">mit mild gesalzenem Lachs, roten Zwiebeln und Rucola, Frischkäse</div>
+          <div class="desc-ru">с малосольным лососем, красным луком, рукколой и сливочным сыром</div>
+        </div>
+        <div class="price">14,00</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Flammkuchen mit Jamón Serrano</div>
+          <div class="name-ru">Фламмкухен с хамоном серрано</div>
+          <div class="desc-de">mit Jamón Serrano, Parmesan und Rucola, Frischkäse</div>
+          <div class="desc-ru">с хамоном серрано, пармезаном, рукколой и сливочным сыром</div>
+        </div>
+        <div class="price">14,00</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Adjarisches Khachapuri</div>
+          <div class="name-ru">Аджарский хачапури</div>
+          <div class="desc-de">Georgisches Käsebrot mit Ei und Butter</div>
+          <div class="desc-ru">Грузинский сырный хлеб с яйцом и маслом</div>
+        </div>
+        <div class="price">14,00</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Weißwein / Белые вина</h2>
+      <p class="sub">Цены: бокал / 0,5 л / бутылка (где указано)</p>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Drago Grauburgunder, trocken, Pfalz</div>
+          <div class="name-ru">Drago Grauburgunder, сухое, Пфальц</div>
+          <div class="desc-de">Ein lebendiger, ausgewogener Wein mit verführerischer Frische und vielschichtigen Aromen von Pfirsich, Apfel und Ananas — abgerundet durch eine harmonische Säure</div>
+          <div class="desc-ru">Живое, сбалансированное вино с соблазнительной свежестью и многослойными ароматами персика, яблока и ананаса — с гармоничной кислотностью</div>
+        </div>
+        <div class="price">5,90 / 13,50 / 19,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">RheinWein Weissburgunder und Rivaner, trocken, Mittelrhein</div>
+          <div class="name-ru">RheinWein Weissburgunder und Rivaner, сухое, Средний Рейн</div>
+          <div class="desc-de">Der Wein besticht durch wunderbare Zitrusfrucht und frische Aromen, während er am Gaumen sortentypisch cremig erscheint, mit eleganter Säure</div>
+          <div class="desc-ru">Вино покоряет цитрусовой свежестью; во вкусе — сортовая кремовость и элегантная кислотность</div>
+        </div>
+        <div class="price">5,90 / 13,50 / 19,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Gottfried Weissburgunder, trocken und fruchtig, Mittelrhein</div>
+          <div class="name-ru">Gottfried Weissburgunder, сухое и фруктовое, Средний Рейн</div>
+          <div class="desc-de">Ein klarer, cremiger Wein mit feinen Aromen von Birne, Zitrone und einem Hauch Vanille. Frisch und lebendig mit vielschichtiger, tiefgründiger Struktur</div>
+          <div class="desc-ru">Чистое кремовое вино с тонами груши, лимона и лёгкой ванили. Свежее и живое, с многослойной глубиной</div>
+        </div>
+        <div class="price">7,90 / 18,50 / 29,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Beethoven Wein Riesling Feinherb, Mosel</div>
+          <div class="name-ru">Beethoven Wein Riesling Feinherb, Мозель</div>
+          <div class="desc-de">Ein feinherber Riesling von der Mosel mit saftigen Aromen von Pfirsich und gelbem Apfel, sanfter Säure und anhaltender Fruchtigkeit — ein harmonischer Genuss</div>
+          <div class="desc-ru">Полусухо-сладковатый рислинг с Мозеля: сочные тона персика и жёлтого яблока, мягкая кислотность и стойкая фруктовость</div>
+        </div>
+        <div class="price">6,90 / 15,50 / 29,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Beethoven Wein Sauvignon Blanc, trocken, Mosel</div>
+          <div class="name-ru">Beethoven Wein Sauvignon Blanc, сухое, Мозель</div>
+          <div class="desc-de">Das Weingut brachte 1998 den ersten Sauvignon Blanc an die Mosel. Frischer Geschmack dieses reduktiv ausgebauten Weins mit Aromen von Grapefruit, Ananas und Wildkräutern</div>
+          <div class="desc-ru">В 1998 году хозяйство впервые привезло совиньон блан на Мозель. Свежий вкус редуктивной выдержки: грейпфрут, ананас и полевые травы</div>
+        </div>
+        <div class="price">6,90 / 15,50 / 23,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Beethoven Wein, Sweet Carolin, lieblich, Mosel</div>
+          <div class="name-ru">Beethoven Wein, Sweet Carolin, полусладкое, Мозель</div>
+          <div class="desc-de">Riesling mit intensiven Ananas- und Pfirsicharomen mit einem für die Mosel typischen Süße-Säure-Spiel</div>
+          <div class="desc-ru">Рислинг с интенсивными ароматами ананаса и персика и типичной для Мозеля игрой сладости и кислоты</div>
+        </div>
+        <div class="price">6,90 / 15,50 / 23,90</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sekt / Игристое</h2>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Drago Sekt, Brut, Franken</div>
+          <div class="name-ru">Drago Sekt, брют, Франкония</div>
+          <div class="desc-de">Ein feinperliger Sekt mit eleganter Frische und fruchtigen Aromen von Apfel und Birne — lebendig im Geschmack</div>
+          <div class="desc-ru">Тонко-играющее игристое с элегантной свежестью и фруктовыми тонами яблока и груши</div>
+        </div>
+        <div class="price">4,90 / 19,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Beethoven Sekt, Pinot Noir Rosé Brut, Mosel</div>
+          <div class="name-ru">Beethoven Sekt, Pinot Noir Rosé Brut, Мозель</div>
+          <div class="desc-de">Ein Mosel-Sekt nach traditioneller Methode, mit feiner Perlage, elegantem Waldbeer-Auftakt und zarten rauchig-karamelligen Noten. 24 Monate Hefelager</div>
+          <div class="desc-ru">Мозельское игристое классическим методом: тонкая перляж, элегантные лесные ягоды и лёгкие дымно-карамельные ноты. 24 месяца выдержки на осадке</div>
+        </div>
+        <div class="price">23,90</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Rotwein / Красные вина</h2>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Pfaffmann Merlot, trocken, Pfalz</div>
+          <div class="name-ru">Pfaffmann Merlot, сухое, Пфальц</div>
+          <div class="desc-de">Ein leichter und fruchtiger Merlot mit weichen Tanninen, saftigen Aromen von Kirsche und Pflaume sowie einem runden, unkomplizierten Abgang</div>
+          <div class="desc-ru">Лёгкий фруктовый мерло с мягкими танинами, сочными тонами вишни и сливы и округлым, лёгким послевкусием</div>
+        </div>
+        <div class="price">5,90 / 13,50 / 19,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Bellevue Cuvée Cab. Franc, Merlot, Regent, trocken, Mittelrhein</div>
+          <div class="name-ru">Bellevue Cuvée Cab. Franc, Merlot, Regent, сухое, Средний Рейн</div>
+          <div class="desc-de">Rotwein mit intensiven Aromen von Grafit und Zwetschgen. Am Gaumen entfalten sich nach anfänglicher Zurückhaltung lebendige rote Beeren. Der Abgang ist saftig, frisch und aromatisch. 18 Monate Barrique</div>
+          <div class="desc-ru">Красное вино с ароматами графита и сливы. Во вкусе после сдержанного начала — живые красные ягоды. Послевкусие сочное, свежее и ароматное. 18 месяцев в баррике</div>
+        </div>
+        <div class="price">9,90 / 20,50 / 38,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Pinot Noir Spätburgunder, trocken, Mittelrhein</div>
+          <div class="name-ru">Pinot Noir / Шпетбургундер, сухое, Средний Рейн</div>
+          <div class="desc-de">Ein kraftvoller Spätburgunder mit tiefgründiger Aromatik. Am Gaumen vollmundig und samtig mit gut eingebundenen Tanninen und feiner Würze. Dezente Röstaromen und elegante Holzfassnote. Langer, harmonischer Abgang. 20 Monate Barrique</div>
+          <div class="desc-ru">Мощный шпетбургундер с глубокой ароматикой. Во вкусе — полнотелость и бархатистость, хорошо вплетённые танины и тонкая пряность. Лёгкие тона обжарки и элегантная бочковая нота. Долгое гармоничное послевкусие. 20 месяцев в баррике</div>
+        </div>
+        <div class="price">52,00</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Roséwein / Розовые вина</h2>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Drago Rosé Merlot, trocken, Pfalz</div>
+          <div class="name-ru">Drago Rosé Merlot, сухое, Пфальц</div>
+          <div class="desc-de">Ein vollmundiger Rosé mit weicher Struktur, reifen Fruchtaromen und dezenter Säure — rund und harmonisch im Geschmack</div>
+          <div class="desc-ru">Полнотелое розе с мягкой структурой, спелыми фруктовыми ароматами и сдержанной кислотностью — округлое и гармоничное</div>
+        </div>
+        <div class="price">5,90 / 13,50 / 19,90</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Vince Blanc de Noir, Spätburgunder und Merlot, trocken, Mittelrhein</div>
+          <div class="name-ru">Vince Blanc de Noir, шпетбургундер и мерло, сухое, Средний Рейн</div>
+          <div class="desc-de">Ein fruchtiger Blanc de Noir mit Aromen von reifen roten Beeren und saftigem Pfirsich</div>
+          <div class="desc-ru">Фруктовый блан де нуар с ароматами спелых красных ягод и сочного персика</div>
+        </div>
+        <div class="price">7,90 / 14,90 / 23,90</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Bier / Пиво</h2>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Ressdorf Kölsch vom Fass 0,3 L / 0,5 L</div>
+          <div class="name-ru">Ressdorf Kölsch разливное 0,3 л / 0,5 л</div>
+        </div>
+        <div class="price">3,50 / 5,00</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="name-de">Bitburger Pils vom Fass 0,3 L / 0,5 L</div>
+          <div class="name-ru">Bitburger Pils разливное 0,3 л / 0,5 л</div>
+        </div>
+        <div class="price">3,70 / 5,50</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="name-de">Benediktiner Weißbier 0,5 L</div>
+          <div class="name-ru">Benediktiner пшеничное 0,5 л</div>
+        </div>
+        <div class="price">5,50</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="name-de">Benediktiner Weißbier alkoholfrei 0,5 L</div>
+          <div class="name-ru">Benediktiner пшеничное безалкогольное 0,5 л</div>
+        </div>
+        <div class="price">5,50</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="name-de">Benediktiner Hell 0,5 L</div>
+          <div class="name-ru">Benediktiner Hell 0,5 л</div>
+        </div>
+        <div class="price">5,50</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="name-de">Benediktiner Hell alkoholfrei 0,3 L</div>
+          <div class="name-ru">Benediktiner Hell безалкогольное 0,3 л</div>
+        </div>
+        <div class="price">3,50</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="name-de">Bitburger Pils alkoholfrei 0,33 L</div>
+          <div class="name-ru">Bitburger Pils безалкогольное 0,33 л</div>
+        </div>
+        <div class="price">3,50</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="name-de">Bitburger Radler 0,33 L</div>
+          <div class="name-ru">Bitburger Radler 0,33 л</div>
+        </div>
+        <div class="price">3,50</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="name-de">Bitburger Radler alkoholfrei 0,33 L</div>
+          <div class="name-ru">Bitburger Radler безалкогольный 0,33 л</div>
+        </div>
+        <div class="price">3,50</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="name-de">Kandi Malz alkoholfrei 0,33 L</div>
+          <div class="name-ru">Kandi Malz безалкогольное 0,33 л</div>
+        </div>
+        <div class="price">4,50</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Softdrinks / Безалкогольные напитки</h2>
+
+      <div class="item"><div><div class="name-de">Afri Cola 0,33 L</div><div class="name-ru">Afri Cola 0,33 л</div></div><div class="price">3,50</div></div>
+      <div class="item"><div><div class="name-de">Afri Cola Zero 0,33 L</div><div class="name-ru">Afri Cola Zero 0,33 л</div></div><div class="price">3,50</div></div>
+      <div class="item"><div><div class="name-de">Bluna Orange 0,33 L</div><div class="name-ru">Bluna апельсин 0,33 л</div></div><div class="price">3,50</div></div>
+      <div class="item"><div><div class="name-de">Bluna Zitrone 0,33 L</div><div class="name-ru">Bluna лимон 0,33 л</div></div><div class="price">3,50</div></div>
+      <div class="item"><div><div class="name-de">Apfelschorle 0,33 L</div><div class="name-ru">Яблочный шорле 0,33 л</div></div><div class="price">3,50</div></div>
+      <div class="item"><div><div class="name-de">Schweppes 0,2 L Bitter Lemon / Wild Berry</div><div class="name-ru">Schweppes 0,2 л Bitter Lemon / Wild Berry</div></div><div class="price">3,50</div></div>
+      <div class="item"><div><div class="name-de">Saft 0,33 L Apfel / Maracuja / Orange / Ananas</div><div class="name-ru">Сок 0,33 л яблоко / маракуйя / апельсин / ананас</div></div><div class="price">4,90</div></div>
+      <div class="item"><div><div class="name-de">Rhodius Wasser 0,25 L Classic / Naturelle</div><div class="name-ru">Rhodius вода 0,25 л Classic / Naturelle</div></div><div class="price">2,70</div></div>
+      <div class="item"><div><div class="name-de">Rhodius Wasser 0,75 L Classic / Naturelle</div><div class="name-ru">Rhodius вода 0,75 л Classic / Naturelle</div></div><div class="price">6,90</div></div>
+      <div class="item"><div><div class="name-de">Elephant Ice Tea 0,33 L Peach / Lemon</div><div class="name-ru">Elephant Ice Tea 0,33 л персик / лимон</div></div><div class="price">4,00</div></div>
+      <div class="item"><div><div class="name-de">Gaffels Fassbrause 0,33 L Orange / Zitrone</div><div class="name-ru">Gaffels Fassbrause 0,33 л апельсин / лимон</div></div><div class="price">4,00</div></div>
+      <div class="item"><div><div class="name-de">Hausgemachte Limonade Erdbeer-Minze</div><div class="name-ru">Домашний лимонад клубника–мята</div></div><div class="price">4,90</div></div>
+    </section>
+
+    <section>
+      <h2>Aperitif / Аперитивы и коктейли</h2>
+
+      <div class="item"><div><div class="name-de">Aperol Spritz Classic / Erdbeer</div><div class="name-ru">Aperol Spritz классический / клубничный</div></div><div class="price">8,50</div></div>
+      <div class="item"><div><div class="name-de">Lillet</div><div class="name-ru">Lillet</div></div><div class="price">8,50</div></div>
+      <div class="item"><div><div class="name-de">Hugo</div><div class="name-ru">Hugo</div></div><div class="price">8,50</div></div>
+      <div class="item"><div><div class="name-de">Mojito</div><div class="name-ru">Мохито</div></div><div class="price">8,50</div></div>
+      <div class="item"><div><div class="name-de">Mojito alkoholfrei</div><div class="name-ru">Мохито безалкогольный</div></div><div class="price">7,50</div></div>
+      <div class="item"><div><div class="name-de">Piña Colada</div><div class="name-ru">Пина Колада</div></div><div class="price">8,50</div></div>
+      <div class="item"><div><div class="name-de">Sex on the Beach</div><div class="name-ru">Sex on the Beach</div></div><div class="price">8,50</div></div>
+      <div class="item"><div><div class="name-de">Gin Tonic</div><div class="name-ru">Джин-тоник</div></div><div class="price">8,50</div></div>
+      <div class="item"><div><div class="name-de">Tequila Sunrise</div><div class="name-ru">Tequila Sunrise</div></div><div class="price">8,50</div></div>
+      <div class="item"><div><div class="name-de">Jack Daniels + Cola</div><div class="name-ru">Jack Daniels + Cola</div></div><div class="price">6,50</div></div>
+      <div class="item"><div><div class="name-de">Vodka + Lemon</div><div class="name-ru">Водка + лимон</div></div><div class="price">6,50</div></div>
+    </section>
+
+    <section>
+      <h2>Shots / Шоты</h2>
+
+      <div class="item"><div><div class="name-de">Armenischer Cognac 0,2 cl</div><div class="name-ru">Армянский коньяк 0,2 cl</div></div><div class="price">3,50</div></div>
+      <div class="item"><div><div class="name-de">Vodka 0,2 cl</div><div class="name-ru">Водка 0,2 cl</div></div><div class="price">3,00</div></div>
+      <div class="item"><div><div class="name-de">Jack Daniels 0,2 cl</div><div class="name-ru">Jack Daniels 0,2 cl</div></div><div class="price">3,00</div></div>
+      <div class="item"><div><div class="name-de">Tequila 0,2 cl</div><div class="name-ru">Текила 0,2 cl</div></div><div class="price">3,00</div></div>
+      <div class="item"><div><div class="name-de">Jägermeister 0,2 cl</div><div class="name-ru">Jägermeister 0,2 cl</div></div><div class="price">3,00</div></div>
+    </section>
+
+    <section>
+      <h2>Dessert / Десерты</h2>
+
+      <div class="item">
+        <div>
+          <div class="name-de">Alte Liebe Eis</div>
+          <div class="name-ru">Мороженое «Alte Liebe»</div>
+          <div class="desc-de">drei Kugeln Eis mit Wahl-Topping: Kirsche / Schokolade / Beeren</div>
+          <div class="desc-ru">три шарика мороженого на выбор с топпингом: вишня / шоколад / ягоды</div>
+        </div>
+        <div class="price">5,90</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="name-de">Lava Cake mit 1 Kugel Eis</div>
+          <div class="name-ru">Лава-кейк с 1 шариком мороженого</div>
+        </div>
+        <div class="price">7,90</div>
+      </div>
+      <div class="item"><div><div class="name-de">Apfelkuchen</div><div class="name-ru">Яблочный пирог</div></div><div class="price">3,90</div></div>
+      <div class="item"><div><div class="name-de">Käsekuchen</div><div class="name-ru">Чизкейк / творожный пирог</div></div><div class="price">4,90</div></div>
+      <div class="item"><div><div class="name-de">Tiramisu</div><div class="name-ru">Тирамису</div></div><div class="price">4,90</div></div>
+      <div class="item"><div><div class="name-de">Extra Kugel Eis</div><div class="name-ru">Дополнительный шарик мороженого</div></div><div class="price">1,80</div></div>
+    </section>
+
+    <section>
+      <h2>Heißgetränke / Горячие напитки</h2>
+
+      <div class="item"><div><div class="name-de">Kaffee</div><div class="name-ru">Кофе</div></div><div class="price">3,00</div></div>
+      <div class="item"><div><div class="name-de">Kaffee Crema</div><div class="name-ru">Кофе крема</div></div><div class="price">3,50</div></div>
+      <div class="item"><div><div class="name-de">Espresso</div><div class="name-ru">Эспрессо</div></div><div class="price">2,60</div></div>
+      <div class="item"><div><div class="name-de">Doppelter Espresso</div><div class="name-ru">Двойной эспрессо</div></div><div class="price">3,90</div></div>
+      <div class="item"><div><div class="name-de">Espresso Macchiato</div><div class="name-ru">Эспрессо макиато</div></div><div class="price">3,20</div></div>
+      <div class="item"><div><div class="name-de">Cappuccino</div><div class="name-ru">Капучино</div></div><div class="price">3,90</div></div>
+      <div class="item"><div><div class="name-de">Milchkaffee</div><div class="name-ru">Кофе с молоком</div></div><div class="price">3,90</div></div>
+      <div class="item"><div><div class="name-de">Latte Macchiato</div><div class="name-ru">Латте макиато</div></div><div class="price">4,50</div></div>
+      <div class="item"><div><div class="name-de">Heiße Schokolade</div><div class="name-ru">Горячий шоколад</div></div><div class="price">3,50</div></div>
+      <div class="item">
+        <div>
+          <div class="name-de">Tasse Tee</div>
+          <div class="name-ru">Чашка чая</div>
+          <div class="desc-de">schwarz, grün, fruchtig, Kräutertee, Minztee</div>
+          <div class="desc-ru">чёрный, зелёный, фруктовый, травяной, мятный</div>
+        </div>
+        <div class="price">3,00</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="name-de">Iced Latte Macchiato</div>
+          <div class="name-ru">Айс-латте макиато</div>
+          <div class="desc-de">wahlweise mit Karamell, Erdbeere oder Kokos</div>
+          <div class="desc-ru">на выбор с карамелью, клубникой или кокосом</div>
+        </div>
+        <div class="price">4,90</div>
+      </div>
+    </section>
+
+    <footer>
+      Источник: <a href="https://alteliebeschiff.com/menu/speisekarte-alte-liebe.pdf">speisekarte-alte-liebe.pdf</a><br />
+      Alte Liebe Schiff · Rheinallee 11, 53639 Königswinter
+    </footer>
+  </div>
+</body>
+</html>
